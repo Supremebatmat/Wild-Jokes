@@ -1,0 +1,125 @@
+/* Corps de la page */
+
+
+/* Conteneur principal */
+.max-w-md {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #ffffff; /* Fond du formulaire */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre principal */
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #c2a75d;
+  margin-bottom: 15px;
+}
+
+/* Message de confirmation */
+.text-white {
+  color: white;
+}
+
+.bg-green-500 {
+  background-color: #38a169;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.rounded {
+  border-radius: 8px;
+}
+
+/* Formulaire */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Labels */
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #c2a75d;
+  margin-bottom: 0.5rem;
+}
+
+/* Champs du formulaire */
+textarea,
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #c2a75d;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  color: #333;
+  box-sizing: border-box;
+}
+
+/* Effet de survol pour les champs */
+textarea:focus,
+input:focus,
+select:focus {
+  border-color: #5a2e2e;
+  outline: none;
+  box-shadow: 0 0 5px rgba(90, 46, 46, 0.8);
+}
+
+/* Bouton de soumission */
+button {
+  background-color: #5a2e2e;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #7a3a3a;
+  transform: translateY(-2px);
+}
+
+/* Bouton actif */
+button:active {
+  transform: translateY(1px);
+}
+
+/* Effets généraux pour les champs et les boutons */
+input, textarea, select {
+  transition: all 0.3s ease;
+}
+
+select {
+  background-color: #f0f0f0;
+}
+
+select option {
+  background-color: #ffffff;
+}
+
+/* Espacement entre les éléments du formulaire */
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}

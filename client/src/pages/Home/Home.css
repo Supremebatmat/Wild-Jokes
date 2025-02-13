@@ -1,0 +1,142 @@
+.first-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10vh;
+  gap: 50px;
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo-homepage {
+  width: 20vw;
+  height: auto;
+  border-radius: 50px;
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo-homepage:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.presentation {
+  width: 60%;
+  font-size: 1.1rem;
+  text-align: justify;
+  padding: 20px;
+  background: rgba(46, 77, 46, 0.85);
+  border: 2px solid #c2a75d;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(194, 167, 93, 0.3);
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+
+.second-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10vh;
+  gap: 50px;
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tomache {
+  width: 20vw;
+  height: auto;
+  border: 5px solid #b89b72;
+  border-radius: 8px;
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  
+  /* Effet photo usée */
+  filter: sepia(50%) contrast(85%) brightness(90%) saturate(80%);
+  background: radial-gradient(circle, rgba(255, 255, 230, 0.3) 10%, transparent 80%);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), 
+              inset 2px 2px 5px rgba(0, 0, 0, 0.1), 
+              -3px -3px 8px rgba(255, 255, 255, 0.2);
+  
+  /* Coins irréguliers */
+  clip-path: polygon(10% 0%, 95% 0%, 100% 10%, 100% 90%, 95% 100%, 5% 100%, 0% 90%, 0% 10%);
+
+  /* Effet de survol pour du réalisme */
+  transform-origin: center;
+  z-index: 9000;
+}
+
+.tomache:hover {
+  transform: scale(1.5) rotate(-1deg);
+  opacity: 1;
+}
+
+/* Bordures usées */
+.tomache::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
+
+/* Effet de grain pour un look plus authentique */
+.tomache {
+  position: relative;
+}
+
+.tomache::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://www.transparenttextures.com/patterns/noise.png");
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+
+.presentation-tomache {
+  width: 60%;
+  font-size: 1.1rem;
+  text-align: justify;
+  padding: 20px;
+  background: rgba(46, 77, 46, 0.85);
+  border: 2px solid #c2a75d;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(194, 167, 93, 0.3);
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+
+.inspiration {
+  margin-top: 20vh;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .first-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo {
+    width: 60vw;
+    max-width: 250px;
+  }
+
+  .presentation {
+    width: 90%;
+    font-size: 1rem;
+  }
+}

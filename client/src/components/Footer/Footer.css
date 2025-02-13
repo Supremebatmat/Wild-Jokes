@@ -1,0 +1,7 @@
+.footer {
+  position:absolute;
+  font-size: 0.9rem;
+  color: #888;
+  flex-grow: 1;
+  margin-top: 20vh;
+}
