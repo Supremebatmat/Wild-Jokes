@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Post.css";
+import pouet from "./../../assets/images/pouet.mp3";
 
 type JokeForm = {
   content: string;
@@ -16,6 +17,8 @@ function AddJoke() {
 
   const [message, setMessage] = useState<string | null>(null);
 
+  const [showImage, setShowImage] = useState<boolean>(false);
+
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -26,6 +29,11 @@ function AddJoke() {
       ...prevData,
       [name]: name === "category_id" ? Number(value) : value,
     }));
+  };
+
+  const playSound = () => {
+    const audio = new Audio(pouet);
+    audio.play();
   };
 
   const onSubmit = async (e: React.FormEvent) => {
@@ -45,7 +53,13 @@ function AddJoke() {
       setMessage("Blague ajoutée avec succès !");
       setFormData({ content: "", author: "", category_id: 1 });
 
-      setTimeout(() => setMessage(null), 3000);
+      playSound();
+      setShowImage(true);
+
+      setTimeout(() => {
+        setMessage(null);
+        setShowImage(false);
+      }, 3000);
     } catch (error) {
       setMessage("Une erreur s'est produite. Réessaie !");
     }
@@ -117,6 +131,12 @@ function AddJoke() {
           Ajouter la blague
         </button>
       </form>
+
+      {showImage && (
+        <div className="text-center mt-4">
+          <img src="/path/to/image/file.jpg" alt="Success" />
+        </div>
+      )}
     </div>
   );
 }

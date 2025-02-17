@@ -1,8 +1,10 @@
 import "./Home.css";
+import { useNavigate } from "react-router-dom";
 import logo from "../../assets/images/Logo.png";
 import tomache from "../../assets/images/tomache.jpg";
 
 function Home() {
+  const navigate = useNavigate();
   return (
     <>
       <section className="first-section">
@@ -32,7 +34,13 @@ function Home() {
         L'inspiration première <strong>Thomache Lamissuk</strong>
       </h1>
       <section className="second-section">
-        <img src={tomache} alt="logo" className="tomache" />
+        <img
+          src={tomache}
+          alt="logo"
+          className="tomache"
+          onClick={() => navigate("/Wiki-tomache")}
+          onKeyUp={(e) => e.key === "Enter" && navigate("/Wiki-tomache")}
+        />
         <p className="presentation-tomache">
           L’héritage légendaire de Thomache Lamissuk <br />
           Si l’humour était un art martial, alors Thomache Lamissuk en serait le

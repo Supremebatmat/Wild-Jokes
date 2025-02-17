@@ -15,9 +15,8 @@ function DevJokes() {
       const data = await response.json();
 
       if (data?.content) {
-        // Vérifier que data est bien un objet avec content
         setJoke(data.content);
-        setAuthor(data.author || "Anonyme"); // Si pas d'auteur, afficher "Anonyme"
+        setAuthor(data.author || "Anonyme");
       } else {
         setJoke("Aucune blague trouvée !");
         setAuthor("");
@@ -31,14 +30,14 @@ function DevJokes() {
 
   return (
     <section className="dev-jokes">
-      <div className="container">
-        <div className="minicontainer">
+      <div className="container-dev-jokes">
+        <div className="minicontainer-dev-jokes">
           <h1>Dev-Jokes</h1>
 
-          <div className="stats">
-            <p>
+          <div className="jokes">
+            <p className="joke-dev-joke">
               <strong> </strong>{" "}
-              <span id="joke" style={{ color: "black" }}>
+              <span id="joke-dev-joke">
                 {joke || "Cliquez sur le bouton pour une blague !"}
               </span>
             </p>
@@ -52,19 +51,14 @@ function DevJokes() {
           <button type="button" className="fetch-joke-btn" onClick={fetchJoke}>
             Obtenir une blague de dev
           </button>
-
-          {/* Affichage de la blague et de l'auteur */}
-          {/* {joke && (
-            <p className="joke-display">
-              <strong>Blague : </strong> {joke}
-            </p>
-          )}
-          {author && (
-            <p className="joke-author">
-              <strong>Auteur : </strong> {author}
-            </p>
-          )} */}
         </div>
+        <button type="button" className="upgrade">
+          {" "}
+          + 1
+        </button>
+        <button type="button" className="upgrade">
+          - 1
+        </button>
       </div>
     </section>
   );

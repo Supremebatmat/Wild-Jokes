@@ -7,11 +7,14 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Import the main app component
 import App from "./App";
-import DevJokes from "./pages/Devjokes/DevJokes";
 import DarkJokes from "./pages/Darkjokes/DarkJokes";
-import PmuVibes from "./pages/Pmuvibe/PmuVibes";
+import DevJokes from "./pages/Devjokes/DevJokes";
 import Home from "./pages/Home/Home";
+import PmuVibes from "./pages/Pmuvibe/PmuVibes";
 import AddJoke from "./pages/Post/Post";
+import Feur from "./pages/Wiki/feur";
+import Quoicou from "./pages/Wiki/quoicou";
+import Tomache from "./pages/Wiki/tomache";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -45,8 +48,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/Post",
-        element: < AddJoke/>,
+        element: <AddJoke />,
       },
+      { path: "/Wiki-tomache", element: <Tomache /> },
+      { path: "/Wiki-quoicou", element: <Quoicou /> },
+      { path: "/Wiki-feur", element: <Feur /> },
     ],
   },
 ]);

@@ -1,0 +1,44 @@
+.page-wiki {
+  background-color: white;
+  width: 100%;
+}
+
+.Wiki-tomache-section-wiki {
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #a2a9b1;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  display: flex;
+  align-items: anchor-center;
+  gap: 50px;
+}
+
+.wikepedia {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.tomache-wiki {
+  display: block;
+  max-width: 250px;
+  height: auto;
+  margin: 0 auto 15px auto;
+  border: 1px solid #a2a9b1;
+  background-color: #fff;
+  padding: 3px;
+}
+
+.presentation-tomache-wiki {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+}

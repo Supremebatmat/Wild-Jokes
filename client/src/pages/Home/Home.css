@@ -20,7 +20,7 @@
 }
 
 .logo-homepage:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) rotate(360deg);
   opacity: 1;
 }
 
@@ -56,18 +56,27 @@
   border-radius: 8px;
   opacity: 0.9;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  
-  /* Effet photo usée */
-  filter: sepia(50%) contrast(85%) brightness(90%) saturate(80%);
-  background: radial-gradient(circle, rgba(255, 255, 230, 0.3) 10%, transparent 80%);
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), 
-              inset 2px 2px 5px rgba(0, 0, 0, 0.1), 
-              -3px -3px 8px rgba(255, 255, 255, 0.2);
-  
-  /* Coins irréguliers */
-  clip-path: polygon(10% 0%, 95% 0%, 100% 10%, 100% 90%, 95% 100%, 5% 100%, 0% 90%, 0% 10%);
 
-  /* Effet de survol pour du réalisme */
+  filter: sepia(50%) contrast(85%) brightness(90%) saturate(80%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 230, 0.3) 10%,
+    transparent 80%
+  );
+  box-shadow:
+    5px 5px 15px rgba(0, 0, 0, 0.3),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.1), -3px -3px 8px rgba(255, 255, 255, 0.2);
+
+  clip-path: polygon(
+    10% 0%,
+    95% 0%,
+    100% 10%,
+    100% 90%,
+    95% 100%,
+    5% 100%,
+    0% 90%,
+    0% 10%
+  );
   transform-origin: center;
   z-index: 9000;
 }
@@ -77,7 +86,6 @@
   opacity: 1;
 }
 
-/* Bordures usées */
 .tomache::after {
   content: "";
   position: absolute;
@@ -88,7 +96,6 @@
   pointer-events: none;
 }
 
-/* Effet de grain pour un look plus authentique */
 .tomache {
   position: relative;
 }
@@ -104,7 +111,6 @@
   opacity: 0.2;
   pointer-events: none;
 }
-
 
 .presentation-tomache {
   width: 60%;
@@ -123,7 +129,6 @@
   margin-top: 20vh;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .first-section {
     flex-direction: column;

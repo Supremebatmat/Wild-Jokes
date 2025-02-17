@@ -1,4 +1,3 @@
-/* Styles pour la liste ambiance PMU */
 ul {
   margin-top: 1vh;
   list-style: none;
@@ -6,7 +5,7 @@ ul {
   justify-content: space-around;
   align-items: center;
   padding: 15px;
-  margin: 0;
+  margin-left: 0;
   background: linear-gradient(45deg, #2e4d2e, #3a5a3a);
   border: 3px solid #c2a75d;
   border-radius: 8px;
@@ -30,7 +29,6 @@ ul {
   opacity: 1;
 }
 
-/* Styles pour les boutons ambiance PMU */
 button {
   font-family: "Arial", sans-serif;
   font-size: large;
@@ -46,7 +44,6 @@ button {
   transition: all 0.2s ease-in-out;
 }
 
-/* Effet au survol des boutons */
 button:hover {
   color: #5a2e2e;
   background: linear-gradient(90deg, #c2a75d, #b08d5c);
@@ -54,19 +51,16 @@ button:hover {
   box-shadow: 0 0 10px rgba(176, 141, 92, 0.5);
 }
 
-/* Effet au clic des boutons */
 button:active {
   transform: scale(0.95);
   box-shadow: 0 0 5px rgba(90, 46, 46, 0.5) inset;
 }
 
-/* Style pour le focus des boutons */
 button:focus {
   outline: 2px dashed #b08d5c;
   outline-offset: 3px;
 }
 
-/* Boutons désactivés */
 button:disabled {
   color: #777;
   cursor: not-allowed;
@@ -74,7 +68,6 @@ button:disabled {
   border: 2px solid #777;
 }
 
-/* Version mobile façon PMU en déplacement */
 @media (max-width: 600px) {
   ul {
     flex-direction: column;

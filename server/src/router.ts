@@ -3,12 +3,10 @@ import express from "express";
 const router = express.Router();
 const app = express();
 
-app.use(express.json()); // ✅ Indispensable pour parser le JSON
-app.use(express.urlencoded({ extended: true })); // (optionnel, pour les formulaires)
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.use(router); // 💡 Place tes routes après les middlewares
-
-
+app.use(router); //
 
 /* ************************************************************************* */
 // Define Your API Routes Here
